@@ -25,6 +25,44 @@
     <p>&copy; 2025 Marketplace Artesanal</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const productos = [
+        {
+          nombre: 'Bolso Artesanal',
+          descripcion: 'Bolso hecho a mano con materiales reciclados.',
+          imagen: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308'
+        },
+        {
+          nombre: 'Jarra de Cerámica',
+          descripcion: 'Jarra pintada a mano por artesanos locales.',
+          imagen: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb'
+        },
+        {
+          nombre: 'Tejido Andino',
+          descripcion: 'Hermoso tejido tradicional de la región andina.',
+          imagen: 'https://images.unsplash.com/photo-1464983953574-0892a716854b'
+        }
+        // Agrega más productos aquí con links externos de imágenes
+      ];
+
+      const contenedor = document.getElementById('productos');
+      productos.forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'producto';
+        div.innerHTML = `
+          <img src="${p.imagen}" alt="${p.nombre}" style="width:200px;height:auto;">
+          <h3>${p.nombre}</h3>
+          <p>${p.descripcion}</p>
+        `;
+        contenedor.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
+  </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>
